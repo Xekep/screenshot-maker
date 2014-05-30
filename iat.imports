@@ -1,0 +1,33 @@
+;   =========================================================
+;           IAT
+;   =========================================================
+library kernel32, 'kernel32.dll',\
+        user32, 'user32.dll',\
+        gdi32, 'gdi32.dll',\
+        gdiplus, 'gdiplus.dll'
+
+import  kernel32,\
+        ExitProcess, 'ExitProcess',\
+        VirtualFree, 'VirtualFree',\
+        VirtualAlloc, 'VirtualAlloc'
+                
+import  user32,\
+        ReleaseDC, 'ReleaseDC',\
+        GetDC, 'GetDC',\
+        GetSystemMetrics, 'GetSystemMetrics'
+
+import  gdi32,\
+        CreateCompatibleDC, 'CreateCompatibleDC',\
+        CreateCompatibleBitmap, 'CreateCompatibleBitmap',\
+        SelectObject, 'SelectObject',\
+        BitBlt, 'BitBlt',\
+        DeleteObject, 'DeleteObject'
+
+import  gdiplus,\
+        GdiplusStartup, 'GdiplusStartup',\
+        GdipCreateBitmapFromHBITMAP, 'GdipCreateBitmapFromHBITMAP',\
+        GdipDisposeImage, 'GdipDisposeImage',\
+        GdiplusShutdown, 'GdiplusShutdown',\
+        GdipSaveImageToFile, 'GdipSaveImageToFile',\
+        GdipGetImageEncodersSize, 'GdipGetImageEncodersSize',\
+        GdipGetImageEncoders, 'GdipGetImageEncoders'
